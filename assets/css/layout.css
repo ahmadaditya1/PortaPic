@@ -1,0 +1,206 @@
+/* Porta Pic — kerangka halaman: shell, band, section, grid. */
+
+.shell {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+[id] {
+  scroll-margin-top: calc(var(--nav-h) + 16px);
+}
+
+/* ---- Band: pemisah section, bukan garis atau shadow ----------------- */
+
+.band {
+  position: relative;
+}
+
+.band--paper {
+  background: var(--paper);
+}
+
+.band--cream {
+  background: var(--cream);
+}
+
+.band--periwinkle {
+  background: var(--periwinkle);
+}
+
+.band--blue {
+  background: var(--blue);
+  color: var(--paper);
+}
+
+.band--orange {
+  background: var(--orange);
+  color: var(--ink);
+}
+
+.band--amber {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+.band--ink {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.band--peach {
+  background: var(--peach);
+  color: var(--peach-ink);
+}
+
+.band--pale-blue {
+  background: var(--pale-blue);
+  border-block: var(--border);
+  height: clamp(10px, 1.4vw, 16px);
+}
+
+.section {
+  padding-block: var(--section-y);
+}
+
+.section--tight {
+  padding-block: clamp(40px, 5vw, 72px);
+}
+
+.section--flush-top {
+  padding-block-start: clamp(24px, 3vw, 40px);
+}
+
+/* ---- Ritme --------------------------------------------------------- */
+
+.stack {
+  display: grid;
+  gap: var(--sp-md);
+}
+
+.stack--lg {
+  gap: var(--sp-xl);
+}
+
+.stack--xl {
+  gap: var(--sp-2xl);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+
+.cluster--lg {
+  gap: var(--sp-md);
+}
+
+.measure {
+  max-width: 68ch;
+}
+
+.measure--tight {
+  max-width: 52ch;
+}
+
+.lede {
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+}
+
+.quiet {
+  color: var(--ink-soft);
+}
+
+.band--blue .quiet,
+.band--ink .quiet {
+  color: rgb(255 255 255 / 0.78);
+}
+
+.rule {
+  border: 0;
+  border-top: var(--border);
+}
+
+/* ---- Judul + callout ---------------------------------------------- */
+
+.headline-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-lg) var(--sp-2xl);
+  margin-bottom: var(--sp-2xl);
+}
+
+/* ---- Grid ---------------------------------------------------------- */
+
+.split {
+  display: grid;
+  gap: var(--sp-2xl);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.split--cards {
+  gap: var(--sp-lg);
+}
+
+.split--wide-left {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+}
+
+.grid-cards {
+  display: grid;
+  gap: var(--sp-lg);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid-3 {
+  display: grid;
+  gap: var(--sp-lg);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 0.78fr 1.18fr 1.18fr 0.78fr;
+  gap: var(--sp-lg);
+  align-items: start;
+}
+
+/* ---- Responsif ----------------------------------------------------- */
+
+@media (max-width: 1080px) {
+  .split,
+  .split--wide-left {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-xl);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-md);
+  }
+
+  .headline-row {
+    margin-bottom: var(--sp-xl);
+  }
+}

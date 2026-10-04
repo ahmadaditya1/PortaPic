@@ -1,0 +1,98 @@
+/* Porta Pic — design tokens.
+   Sumber warna & komposisi: referensi.png. Aturan pakai: DESIGN.md. */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Palette ---------------------------------------------------- */
+  --ink: #191c20;
+  --ink-soft: #3b3a35;
+  --paper: #ffffff;
+
+  --cream: #fff1c1;
+  --cream-soft: #fdf7e2;
+  --periwinkle: #d4e3ff;
+
+  --orange: #e87f00;
+  --orange-deep: #b85800;
+
+  --blue: #4673af;
+  --blue-deep: #35598b;
+  --slate: #4e80c2;
+
+  --amber: #e59d2c;
+  --amber-deep: #cf8a1c;
+  --maroon: #8a242e;
+
+  --peach: #ffddb5;
+  --peach-ink: #2a1800;
+  --on-warm: #3a2606;
+  --pale-blue: #a9cee7;
+
+  --khaki: #c9c7a8;
+  --khaki-deep: #8c8b76;
+
+  --focus: #35598b;
+
+  /* ---- Type ------------------------------------------------------- */
+  --font-display: "Anybody", "Arial Black", "Helvetica Neue", sans-serif;
+  --font-body: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-wordmark: "Yellowtail", "Segoe Script", cursive;
+
+  --fs-display: clamp(1.75rem, 10.5vw, 6rem);
+  --fs-headline: clamp(1.75rem, 5vw, 3.25rem);
+  --fs-title: clamp(1.125rem, 2.2vw, 1.5rem);
+  --fs-accordion: clamp(1rem, 1.9vw, 1.25rem);
+  --fs-price: clamp(1.25rem, 2.4vw, 1.625rem);
+  --fs-value: clamp(1.25rem, 2.5vw, 1.625rem);
+  --fs-result: clamp(1.75rem, 4vw, 2.5rem);
+  --fs-step: 2rem;
+  --fs-ticker: clamp(0.8125rem, 1.5vw, 1.0625rem);
+  --fs-wordmark: 1.4rem;
+  --fs-body-lg: clamp(1.0625rem, 1.6vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;
+
+  --lh-display: 0.86;
+  --lh-heading: 0.95;
+  --lh-title: 1.15;
+  --lh-body: 1.6;
+
+  --tracking-tight: -0.03em;
+  --tracking-snug: -0.02em;
+  --tracking-wide: 0.12em;
+
+  --stretch-display: 150%;
+
+  /* ---- Space ------------------------------------------------------ */
+  --sp-xxs: 4px;
+  --sp-xs: 8px;
+  --sp-sm: 12px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 32px;
+  --sp-2xl: 48px;
+  --sp-3xl: 64px;
+  --sp-4xl: 96px;
+  --section-y: clamp(56px, 8vw, 112px);
+
+  /* ---- Frame ------------------------------------------------------ */
+  --shell: 1200px;
+  --gutter: clamp(16px, 3vw, 32px);
+  --border-w: 2px;
+  --border: var(--border-w) solid var(--ink);
+  --nav-h: 72px;
+
+  --r-xs: 3px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-pill: 999px;
+
+  /* ---- Motion ----------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur-mid: 260ms;
+  --dur-slow: 620ms;
+}

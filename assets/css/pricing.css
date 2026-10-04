@@ -1,0 +1,360 @@
+/* Porta Pic — Pricing & Service Section (varian Neo-Brutalism).
+   Blok ini sengaja naik satu tingkat dari dunia zine datar di halaman lain:
+   garis 3px + bayangan offset padat tanpa blur. Batasnya ketat di dalam
+   .pricing-nb — komponen di luar section ini tetap memakai garis 2px tanpa
+   bayangan (lihat DESIGN.md, bagian "The Loud Block Rule"). */
+
+.pricing-nb {
+  --nb-border: 3px solid var(--ink);
+  --nb-shadow: 6px 6px 0 var(--ink);
+  --nb-shadow-sm: 4px 4px 0 var(--ink);
+  --nb-shadow-lg: 8px 8px 0 var(--ink);
+}
+
+.funnel {
+  display: grid;
+  gap: var(--sp-xl);
+}
+
+/* ---- Toggle level 1: pilih audiens --------------------------------- */
+
+.pricing-nb .funnel__switch {
+  border: var(--nb-border);
+  border-radius: var(--r-sm);
+  background: var(--paper);
+  box-shadow: var(--nb-shadow-sm);
+  overflow: hidden;
+}
+
+.pricing-nb .funnel__switch .tabs__tab {
+  gap: var(--sp-xs);
+  padding: 16px 22px;
+  font-size: var(--fs-small);
+  letter-spacing: 0.06em;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+
+.pricing-nb .funnel__switch .tabs__tab[aria-selected="false"]:hover {
+  background: var(--cream);
+}
+
+.pricing-nb .tabs__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.pricing-nb .tabs__meta {
+  padding: 2px 6px;
+  border: 2px solid currentColor;
+  border-radius: var(--r-xs);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ---- Toggle level 2: jenis paket sewa ------------------------------ */
+
+.pricing-nb .funnel__sub {
+  display: grid;
+  gap: var(--sp-lg);
+  margin-bottom: var(--sp-xl);
+}
+
+.pricing-nb .funnel__sub .tabs__list {
+  border: var(--nb-border);
+  border-radius: var(--r-sm);
+  background: var(--paper);
+  box-shadow: var(--nb-shadow-sm);
+  overflow: hidden;
+}
+
+.pricing-nb .funnel__sub .tabs__tab {
+  gap: var(--sp-xs);
+  padding: 12px 18px;
+  font-size: var(--fs-label);
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+
+.pricing-nb .funnel__sub .tabs__tab[aria-selected="true"] {
+  background: var(--maroon);
+  color: var(--paper);
+}
+
+.pricing-nb .funnel__sub .tabs__tab[aria-selected="false"]:hover {
+  background: var(--periwinkle);
+}
+
+/* ---- Panel yang bertukar ------------------------------------------- */
+
+.pricing-nb .funnel__panel {
+  outline: none;
+}
+
+.pricing-nb .funnel__panel:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: var(--r-md);
+}
+
+.pricing-nb .funnel__panel,
+.pricing-nb .funnel__grid {
+  animation: nb-panel-in 220ms var(--ease-out) both;
+}
+
+@keyframes nb-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.pricing-nb .funnel__grid {
+  display: grid;
+  gap: var(--sp-lg);
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  align-items: start;
+}
+
+/* ---- Kartu paket --------------------------------------------------- */
+
+.pricing-nb .nb-card {
+  border: var(--nb-border);
+  border-radius: var(--r-md);
+  box-shadow: var(--nb-shadow);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.pricing-nb .nb-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--nb-shadow-lg);
+}
+
+.pricing-nb .nb-card__spec {
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.pricing-nb .tag-card__price {
+  padding-top: var(--sp-xs);
+  border-top: 3px solid var(--ink);
+}
+
+.pricing-nb .nb-card .check-list li {
+  font-size: var(--fs-small);
+}
+
+/* ---- Tombol -------------------------------------------------------- */
+
+.pricing-nb .btn {
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow-sm);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+
+.pricing-nb .btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--nb-shadow);
+}
+
+.pricing-nb .btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+/* ---- Catatan & panel mitra ----------------------------------------- */
+
+.pricing-nb .funnel__notes {
+  display: grid;
+  gap: var(--sp-md);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: var(--sp-xl);
+}
+
+.pricing-nb .nb-note {
+  padding: var(--sp-md) var(--sp-lg);
+  background: var(--periwinkle);
+  border: var(--nb-border);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-small);
+}
+
+.pricing-nb .nb-note--plain {
+  background: var(--paper);
+}
+
+.pricing-nb .nb-partner {
+  display: grid;
+  gap: var(--sp-xl);
+  padding: clamp(20px, 3vw, 36px);
+  background: var(--cream);
+  border: var(--nb-border);
+  border-radius: var(--r-md);
+  box-shadow: var(--nb-shadow);
+}
+
+.pricing-nb .nb-share {
+  display: grid;
+  gap: var(--sp-sm);
+}
+
+.pricing-nb .nb-share__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-md);
+  padding: var(--sp-md) var(--sp-lg);
+  background: var(--paper);
+  border: var(--nb-border);
+  border-radius: var(--r-sm);
+}
+
+.pricing-nb .nb-share__row--lead {
+  background: var(--amber);
+}
+
+.pricing-nb .nb-share__range {
+  font-family: var(--font-display);
+  font-size: var(--fs-title);
+  font-weight: 800;
+  font-stretch: var(--stretch-display);
+  letter-spacing: var(--tracking-snug);
+  text-transform: uppercase;
+}
+
+.pricing-nb .nb-share__value {
+  display: grid;
+  gap: 2px;
+  font-family: var(--font-display);
+  font-size: var(--fs-value);
+  font-weight: 900;
+  font-stretch: var(--stretch-display);
+  line-height: 1;
+  letter-spacing: var(--tracking-snug);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.pricing-nb .nb-share__value small {
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.pricing-nb .funnel__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-md);
+}
+
+/* ---- Isi panel mitra (B2B) ----------------------------------------- */
+
+.pricing-nb .nb-partner__intro {
+  display: grid;
+  gap: var(--sp-md);
+}
+
+.pricing-nb .nb-pillars {
+  display: grid;
+  gap: var(--sp-md);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-nb .nb-pillars li {
+  display: grid;
+  gap: var(--sp-xs);
+  align-content: start;
+  padding: var(--sp-lg);
+  background: var(--paper);
+  border: var(--nb-border);
+  border-radius: var(--r-sm);
+}
+
+.pricing-nb .nb-pillars svg {
+  width: 24px;
+  height: 24px;
+  color: var(--maroon);
+}
+
+.pricing-nb .nb-pillars h4,
+.pricing-nb .nb-partner__label {
+  font-family: var(--font-display);
+  font-size: var(--fs-title);
+  font-weight: 800;
+  font-stretch: var(--stretch-display);
+  line-height: var(--lh-title);
+  letter-spacing: var(--tracking-snug);
+  text-transform: uppercase;
+}
+
+.pricing-nb .nb-partner__label {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+.pricing-nb .nb-pillars p {
+  font-size: var(--fs-small);
+}
+
+.pricing-nb .nb-partner__grid {
+  display: grid;
+  gap: var(--sp-xl);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: start;
+}
+
+.pricing-nb .calc {
+  border: var(--nb-border);
+  border-radius: var(--r-md);
+  box-shadow: var(--nb-shadow);
+}
+
+.pricing-nb .calc__head,
+.pricing-nb .calc__row {
+  border-bottom: var(--nb-border);
+}
+
+.pricing-nb .calc__result {
+  border: var(--nb-border);
+}
+
+.pricing-nb .nb-partner .funnel__cta {
+  padding-top: var(--sp-lg);
+  border-top: var(--nb-border);
+}
+
+@media (max-width: 1080px) {
+  .pricing-nb .nb-partner__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .pricing-nb .funnel__switch,
+  .pricing-nb .funnel__sub .tabs__list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-nb .tabs__tab {
+    justify-content: center;
+  }
+
+  .pricing-nb .funnel__notes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pricing-nb .funnel__cta .btn {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}
