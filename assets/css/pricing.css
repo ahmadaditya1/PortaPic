@@ -19,23 +19,61 @@
 /* ---- Toggle level 1: pilih audiens --------------------------------- */
 
 .pricing-nb .funnel__switch {
-  border: var(--nb-border);
-  border-radius: var(--r-sm);
-  background: var(--paper);
-  box-shadow: var(--nb-shadow-sm);
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-md);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  padding: 0;
+  width: auto;
 }
 
 .pricing-nb .funnel__switch .tabs__tab {
+  display: inline-flex;
+  align-items: center;
   gap: var(--sp-xs);
-  padding: 16px 22px;
+  padding: 14px 22px;
+  border: var(--nb-border);
+  border-radius: var(--r-sm);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: var(--nb-shadow-sm);
   font-size: var(--fs-small);
   letter-spacing: 0.06em;
-  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
 }
 
 .pricing-nb .funnel__switch .tabs__tab[aria-selected="false"]:hover {
   background: var(--cream);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--nb-shadow);
+}
+
+.pricing-nb .funnel__switch .tabs__tab[aria-selected="false"]:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.pricing-nb .funnel__switch .tabs__tab[aria-selected="true"] {
+  background: var(--ink);
+  color: var(--cream);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.pricing-nb .funnel__switch .tabs__tab[aria-selected="true"]:hover {
+  background: var(--ink-soft);
+}
+
+.pricing-nb .funnel__switch .tabs__tab:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
 }
 
 .pricing-nb .tabs__icon {
@@ -60,6 +98,9 @@
 }
 
 .pricing-nb .funnel__sub .tabs__list {
+  justify-self: start;
+  width: fit-content;
+  max-width: 100%;
   border: var(--nb-border);
   border-radius: var(--r-sm);
   background: var(--paper);
@@ -338,7 +379,18 @@
 }
 
 @media (max-width: 760px) {
-  .pricing-nb .funnel__switch,
+  .pricing-nb .funnel__switch {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: var(--sp-sm);
+  }
+
+  .pricing-nb .funnel__switch .tabs__tab {
+    flex: 1 1 200px;
+    justify-content: center;
+  }
+
   .pricing-nb .funnel__sub .tabs__list {
     display: grid;
     width: 100%;
