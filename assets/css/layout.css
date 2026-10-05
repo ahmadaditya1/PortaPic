@@ -167,7 +167,7 @@
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 0.78fr 1.18fr 1.18fr 0.78fr;
+  grid-template-columns: 0.85fr 1.25fr 0.85fr;
   gap: var(--sp-lg);
   align-items: start;
 }

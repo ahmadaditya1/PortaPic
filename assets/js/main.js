@@ -220,9 +220,11 @@
       });
 
       number.addEventListener("blur", function () {
+        var min = Number(range.min) || 0;
         var value = readValue(number, max);
+        if (value < min) value = min;
         number.value = String(value);
-        range.value = String(Math.min(value, Number(range.max)));
+        range.value = String(Math.max(min, Math.min(value, Number(range.max))));
         render();
       });
     }
@@ -247,7 +249,8 @@
         });
 
         Array.prototype.slice.call(grid.querySelectorAll("[data-cat]")).forEach(function (item) {
-          item.hidden = active !== "all" && item.getAttribute("data-cat") !== active;
+          var cats = (item.getAttribute("data-cat") || "").split(/\s+/);
+          item.hidden = active !== "all" && cats.indexOf(active) === -1;
         });
       });
     });

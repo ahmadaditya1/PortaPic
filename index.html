@@ -6,13 +6,13 @@
   <title>Porta Pic â€” Photobooth Solo Raya | Everywhere is a Studio</title>
   <meta name="description" content="Porta Pic menghadirkan photobooth ke lokasi acaramu di Solo Raya. Cetak instan, custom frame, QR softfile. Mulai Rp 8.750/strip. Booking via WhatsApp.">
   <meta name="theme-color" content="#fff1c1">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Porta Pic â€” Everywhere is a Studio">
+  <meta property="og:title" content="Porta Pic — Everywhere is a Studio">
   <meta property="og:description" content="Photobooth yang datang ke acaramu di Solo Raya. Cetak instan, custom frame, mulai Rp 8.750/strip. Venue & EO: kerja sama sharing profit tanpa biaya operasional.">
   <meta property="og:locale" content="id_ID">
-  <meta property="og:image" content="assets/img/og-portapic.png">
+  <meta property="og:image" content="assets/img/logo%20portapic.jpeg">
   <!-- Ganti jadi URL absolut (https://domain-kamu/...) setelah di-deploy supaya preview WhatsApp tampil. -->
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -74,7 +74,10 @@
 
   <header class="nav" id="nav">
     <div class="shell nav__inner">
-      <a class="wordmark" href="#top" aria-label="Porta Pic â€” kembali ke atas"><span>Porta</span><span>Pic</span></a>
+      <a class="nav__brand" href="#top" aria-label="Porta Pic — kembali ke atas">
+        <img class="nav__logo" src="assets/img/logo-portapic.webp" alt="Logo Porta Pic" width="40" height="40">
+        <span class="wordmark"><span>Porta</span><span>Pic</span></span>
+      </a>
 
       <nav id="menu" class="nav__links" aria-label="Navigasi utama">
         <a class="nav__link" href="#services">Layanan</a>
@@ -111,7 +114,7 @@
           </a>
           <a class="btn btn--ghost btn--lg" href="#partnership">Ajukan Kerja Sama</a>
         </div>
-        <p class="hero__meta">Surakarta &amp; Solo Raya Â· Mulai Rp 8.750/strip</p>
+        <p class="hero__meta">Surakarta &amp; Solo Raya &middot; Mulai Rp 8.750/strip</p>
       </div>
     </section>
 
@@ -400,8 +403,8 @@
                     <div class="calc__row">
                       <label class="calc__label" for="calc-price-num">Harga per sesi</label>
                       <div class="calc__controls">
-                        <input class="calc__slider" type="range" id="calc-price" min="5000" max="100000" step="1000" value="25000" aria-label="Harga per sesi (slider)">
-                        <span class="field"><span class="field__prefix">Rp</span><input type="number" id="calc-price-num" min="0" step="1000" value="25000" inputmode="numeric"></span>
+                        <input class="calc__slider" type="range" id="calc-price" min="20000" max="100000" step="1000" value="25000" aria-label="Harga per sesi (slider)">
+                        <span class="field"><span class="field__prefix">Rp</span><input type="number" id="calc-price-num" min="20000" step="1000" value="25000" inputmode="numeric"></span>
                       </div>
                     </div>
 
@@ -532,67 +535,64 @@
       <div class="shell">
         <div class="headline-row">
           <h2 class="chip-section" id="gallery-title">Galeri</h2>
-          <p class="callout callout--orange">Contoh hasil cetak dan suasana acara. Foto asli segera menyusul di slot yang sama.</p>
+          <p class="callout callout--orange">Dokumentasi hasil cetak instan 2R &amp; 4R dari berbagai event nyata di Solo Raya.</p>
         </div>
 
         <div class="cluster cluster--lg" role="group" aria-label="Filter kategori galeri" style="margin-bottom:var(--sp-xl)">
           <button class="chip-filter" type="button" data-filter="all" aria-pressed="true">Semua</button>
-          <button class="chip-filter" type="button" data-filter="wedding" aria-pressed="false">Wedding</button>
-          <button class="chip-filter" type="button" data-filter="wisuda" aria-pressed="false">Wisuda</button>
-          <button class="chip-filter" type="button" data-filter="komunitas" aria-pressed="false">Komunitas &amp; Festival</button>
-          <button class="chip-filter" type="button" data-filter="corporate" aria-pressed="false">Corporate</button>
+          <button class="chip-filter" type="button" data-filter="2r" aria-pressed="false">Strip 2R</button>
+          <button class="chip-filter" type="button" data-filter="4r" aria-pressed="false">Cetak 4R</button>
+          <button class="chip-filter" type="button" data-filter="kampus" aria-pressed="false">Event Kampus</button>
+          <button class="chip-filter" type="button" data-filter="festival" aria-pressed="false">Festival &amp; Private</button>
         </div>
 
-        <!-- SLOT FOTO: ganti src tiap <img> di bawah dengan foto asli (JPG/WebP).
-             Rasio: strip 2R â‰ˆ 3:5, print 4R â‰ˆ 4:5. Caption kategori diambil dari data-cat. -->
         <div class="gallery-grid" id="gallery-grid">
-          <figure class="plate plate--strip" data-cat="wedding">
-            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/plate-01.svg" data-caption="Contoh strip 2R â€” placeholder">
-              <span class="plate__frame"><img src="assets/img/gallery/plate-01.svg" alt="Contoh strip foto 2R untuk acara wedding (placeholder)" width="520" height="880" loading="lazy"></span>
+          <!-- 1. Strip 2R — Semar Law Competition -->
+          <figure class="plate plate--strip" data-cat="2r kampus">
+            <button class="plate__button" type="button" data-lightbox="assets/img/2r-event kampus.png" data-caption="Semar Law Competition — Strip 2R Porta Pic">
+              <span class="plate__frame"><img src="assets/img/gallery/2r-semar-law.webp" alt="Hasil cetak photobooth strip 2R Semar Law Competition" width="600" height="1798" loading="lazy"></span>
             </button>
-            <figcaption class="plate__caption chip-caption"><span>2R</span><span>Wedding</span></figcaption>
+            <figcaption class="plate__caption chip-caption"><span>2R</span><span>Semar Law Fair</span></figcaption>
           </figure>
-          <figure class="plate plate--print" data-cat="komunitas">
-            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/plate-02.svg" data-caption="Contoh cetak 4R â€” placeholder">
-              <span class="plate__frame"><img src="assets/img/gallery/plate-02.svg" alt="Contoh cetak foto 4R dari acara komunitas (placeholder)" width="720" height="880" loading="lazy"></span>
+
+          <!-- 2. Cetak 4R — SEF Explore the Future -->
+          <figure class="plate plate--print" data-cat="4r festival kampus">
+            <button class="plate__button" type="button" data-lightbox="assets/img/4r-event kampus.png" data-caption="SEF Explore the Future — Cetak 4R Porta Pic">
+              <span class="plate__frame"><img src="assets/img/gallery/4r-sef.webp" alt="Hasil cetak photobooth 4R acara SEF Explore the Future" width="900" height="1349" loading="lazy"></span>
             </button>
-            <figcaption class="plate__caption chip-caption"><span>Ukuran 4R</span><span>Komunitas</span></figcaption>
+            <figcaption class="plate__caption chip-caption"><span>4R</span><span>SEF Festival</span></figcaption>
           </figure>
-          <figure class="plate plate--print" data-cat="wisuda">
-            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/plate-03.svg" data-caption="Contoh cetak 4R â€” placeholder">
-              <span class="plate__frame"><img src="assets/img/gallery/plate-03.svg" alt="Contoh cetak foto 4R dari acara wisuda (placeholder)" width="720" height="880" loading="lazy"></span>
+
+          <!-- 3. Strip 2R — CODE Event -->
+          <figure class="plate plate--strip" data-cat="2r festival">
+            <button class="plate__button" type="button" data-lightbox="assets/img/2r-event kampus 2.png" data-caption="CODE Event — Strip 2R Porta Pic">
+              <span class="plate__frame"><img src="assets/img/gallery/2r-code.webp" alt="Hasil cetak photobooth strip 2R CODE Event" width="600" height="1799" loading="lazy"></span>
             </button>
-            <figcaption class="plate__caption chip-caption"><span>Ukuran 4R</span><span>Wisuda</span></figcaption>
+            <figcaption class="plate__caption chip-caption"><span>2R</span><span>CODE Event</span></figcaption>
           </figure>
-          <figure class="plate plate--strip" data-cat="corporate">
-            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/plate-04.svg" data-caption="Contoh strip 2R â€” placeholder">
-              <span class="plate__frame"><img src="assets/img/gallery/plate-04.svg" alt="Contoh strip foto 2R untuk acara corporate (placeholder)" width="520" height="880" loading="lazy"></span>
+
+          <!-- 4. Strip 2R — Nayantara Law Fair -->
+          <figure class="plate plate--strip" data-cat="2r kampus">
+            <button class="plate__button" type="button" data-lightbox="assets/img/2r- event kampus 3.png" data-caption="Nayantara Law Fair — Strip 2R Porta Pic">
+              <span class="plate__frame"><img src="assets/img/gallery/2r-nayantara.webp" alt="Hasil cetak photobooth strip 2R Nayantara Law Fair" width="600" height="1798" loading="lazy"></span>
             </button>
-            <figcaption class="plate__caption chip-caption"><span>2R</span><span>Corporate</span></figcaption>
+            <figcaption class="plate__caption chip-caption"><span>2R</span><span>Nayantara Fair</span></figcaption>
           </figure>
-          <figure class="plate plate--strip" data-cat="komunitas">
-            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/plate-05.svg" data-caption="Contoh strip 2R â€” placeholder">
-              <span class="plate__frame"><img src="assets/img/gallery/plate-05.svg" alt="Contoh strip foto 2R dari festival (placeholder)" width="520" height="880" loading="lazy"></span>
+
+          <!-- 5. Cetak 4R — Gignovus's Iftar Dentistry '24 -->
+          <figure class="plate plate--print" data-cat="4r festival private">
+            <button class="plate__button" type="button" data-lightbox="assets/img/4r-private.jpg" data-caption="Gignovus's Iftar Dentistry '24 — Cetak 4R Porta Pic Edition">
+              <span class="plate__frame"><img src="assets/img/gallery/4r-iftar.webp" alt="Hasil cetak photobooth 4R Porta Pic Edition Gignovus Iftar Dentistry" width="900" height="1350" loading="lazy"></span>
             </button>
-            <figcaption class="plate__caption chip-caption"><span>2R</span><span>Festival</span></figcaption>
+            <figcaption class="plate__caption chip-caption"><span>4R</span><span>Gignovus's Iftar</span></figcaption>
           </figure>
-          <figure class="plate plate--print" data-cat="corporate">
-            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/plate-06.svg" data-caption="Contoh cetak 4R â€” placeholder">
-              <span class="plate__frame"><img src="assets/img/gallery/plate-06.svg" alt="Contoh cetak foto 4R dari acara corporate (placeholder)" width="720" height="880" loading="lazy"></span>
+
+          <!-- 6. Strip 2R — SEF Festival -->
+          <figure class="plate plate--strip" data-cat="2r festival kampus">
+            <button class="plate__button" type="button" data-lightbox="assets/img/2r- event kampus 4.png" data-caption="SEF Festival — Strip 2R Porta Pic">
+              <span class="plate__frame"><img src="assets/img/gallery/2r-sef.webp" alt="Hasil cetak photobooth strip 2R SEF Festival" width="600" height="1799" loading="lazy"></span>
             </button>
-            <figcaption class="plate__caption chip-caption"><span>Ukuran 4R</span><span>Corporate</span></figcaption>
-          </figure>
-          <figure class="plate plate--print" data-cat="wedding">
-            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/plate-07.svg" data-caption="Contoh cetak 4R â€” placeholder">
-              <span class="plate__frame"><img src="assets/img/gallery/plate-07.svg" alt="Contoh cetak foto 4R dari acara wedding (placeholder)" width="720" height="880" loading="lazy"></span>
-            </button>
-            <figcaption class="plate__caption chip-caption"><span>Ukuran 4R</span><span>Wedding</span></figcaption>
-          </figure>
-          <figure class="plate plate--strip" data-cat="wisuda">
-            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/plate-08.svg" data-caption="Contoh strip 2R â€” placeholder">
-              <span class="plate__frame"><img src="assets/img/gallery/plate-08.svg" alt="Contoh strip foto 2R dari acara wisuda (placeholder)" width="520" height="880" loading="lazy"></span>
-            </button>
-            <figcaption class="plate__caption chip-caption"><span>2R</span><span>Wisuda</span></figcaption>
+            <figcaption class="plate__caption chip-caption"><span>2R</span><span>SEF Explore</span></figcaption>
           </figure>
         </div>
 
@@ -753,7 +753,10 @@
   <footer class="footer">
     <div class="shell footer__inner">
       <div class="footer__brand">
-        <a class="wordmark" href="#top" aria-label="Porta Pic â€” kembali ke atas"><span>Porta</span><span>Pic</span></a>
+        <a class="footer__brand-link" href="#top" aria-label="Porta Pic — kembali ke atas">
+          <img class="footer__logo" src="assets/img/logo-portapic.webp" alt="Logo Porta Pic" width="52" height="52">
+          <span class="wordmark"><span>Porta</span><span>Pic</span></span>
+        </a>
         <p class="footer__hashtag">#EverywhereisaStudio</p>
       </div>
       <div class="footer__meta">
@@ -766,7 +769,7 @@
           <li><a href="https://www.instagram.com/porta.pic" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.tiktok.com/@porta.pic" target="_blank" rel="noopener">TikTok</a></li>
         </ul>
-        <p class="footer__tape">Â© 2026 Porta Pic</p>
+        <p class="footer__tape">&copy; 2026 Porta Pic</p>
       </div>
     </div>
   </footer>
