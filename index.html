@@ -6,13 +6,14 @@
   <title>Porta Pic â€” Photobooth Solo Raya | Everywhere is a Studio</title>
   <meta name="description" content="Porta Pic menghadirkan photobooth ke lokasi acaramu di Solo Raya. Cetak instan, custom frame, QR softfile. Mulai Rp 8.750/strip. Booking via WhatsApp.">
   <meta name="theme-color" content="#fff1c1">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="icon" href="assets/img/logo%20biru.png" type="image/png">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Porta Pic — Everywhere is a Studio">
   <meta property="og:description" content="Photobooth yang datang ke acaramu di Solo Raya. Cetak instan, custom frame, mulai Rp 8.750/strip. Venue & EO: kerja sama sharing profit tanpa biaya operasional.">
   <meta property="og:locale" content="id_ID">
-  <meta property="og:image" content="assets/img/logo%20portapic.jpeg">
+  <meta property="og:image" content="assets/img/logo%20biru.png">
   <!-- Ganti jadi URL absolut (https://domain-kamu/...) setelah di-deploy supaya preview WhatsApp tampil. -->
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -24,6 +25,7 @@
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pricing.css">
+  <link rel="stylesheet" href="assets/css/intro.css">
 
   <script type="application/ld+json">
   {
@@ -41,7 +43,7 @@
   }
   </script>
 </head>
-<body>
+<body class="splash-active">
   <a class="skip-link" href="#main">Lewati ke konten</a>
 
   <svg xmlns="http://www.w3.org/2000/svg" hidden aria-hidden="true">
@@ -72,10 +74,53 @@
     </defs>
   </svg>
 
+  <!-- ===== Studio Clim Style Preloader (Porta Pic Motion Edition) ===== -->
+  <aside class="ldr" id="csg-preloader" aria-label="Porta Pic Loading" role="dialog" aria-modal="true">
+    <!-- Skip button -->
+    <button class="ldr_skip" id="intro-skip" type="button" aria-label="Lewati animasi intro">
+      <span>Lewati</span>
+      <kbd>ESC</kbd>
+    </button>
+
+    <!-- Vertical Color Bands (Porta Pic Brand Palette) -->
+    <div class="ldr_colr" aria-hidden="true">
+      <div class="ldr_cl" style="--c: var(--orange, #e87f00);"></div>
+      <div class="ldr_cl" style="--c: var(--cream, #fff1c1);"></div>
+      <div class="ldr_cl" style="--c: var(--blue, #4673af);"></div>
+      <div class="ldr_cl" style="--c: var(--maroon, #8a242e);"></div>
+      <div class="ldr_cl" style="--c: var(--peach, #ffddb5);"></div>
+    </div>
+
+    <!-- Black Masking Overlay Bars (Cascade down via scaleY: 0) -->
+    <div class="ldr_bk" aria-hidden="true">
+      <div class="ldr_cl"></div>
+      <div class="ldr_cl"></div>
+      <div class="ldr_cl"></div>
+      <div class="ldr_cl"></div>
+      <div class="ldr_cl"></div>
+    </div>
+
+    <!-- Centered Logo & Tagline -->
+    <div class="ldr_center">
+      <img
+        src="assets/img/logo-teks-trimmed.png"
+        alt="Porta Pic"
+        class="ldr_img"
+        width="440"
+        height="307"
+      >
+      <div class="ldr_tagline">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spark"/></svg>
+        <span>Everywhere is a Studio</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spark"/></svg>
+      </div>
+    </div>
+  </aside>
+
   <header class="nav" id="nav">
     <div class="shell nav__inner">
       <a class="nav__brand" href="#top" aria-label="Porta Pic — kembali ke atas">
-        <img class="nav__logo" src="assets/img/logo-portapic.webp" alt="Logo Porta Pic" width="40" height="40">
+        <img class="nav__logo" src="assets/img/logo%20biru.png" alt="Logo Porta Pic" width="40" height="40">
         <span class="wordmark"><span>Porta</span><span>Pic</span></span>
       </a>
 
@@ -754,7 +799,7 @@
     <div class="shell footer__inner">
       <div class="footer__brand">
         <a class="footer__brand-link" href="#top" aria-label="Porta Pic — kembali ke atas">
-          <img class="footer__logo" src="assets/img/logo-portapic.webp" alt="Logo Porta Pic" width="52" height="52">
+          <img class="footer__logo" src="assets/img/logo%20biru.png" alt="Logo Porta Pic" width="52" height="52">
           <span class="wordmark"><span>Porta</span><span>Pic</span></span>
         </a>
         <p class="footer__hashtag">#EverywhereisaStudio</p>
@@ -790,5 +835,6 @@
 
   <script src="assets/js/pricing.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/intro.js" defer></script>
 </body>
 </html>

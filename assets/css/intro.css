@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Porta Pic — Studio Clim Style Preloader & Intro Animation
+   Inspired by studioclim.com, adapted to Porta Pic Neo-Brutalist Design
+   ========================================================================== */
+
+/* Prevent page scrolling while preloader is active */
+body.splash-active {
+  overflow: hidden !important;
+}
+
+/* --------------------------------------------------------------------------
+   Preloader Overlay (.ldr)
+   -------------------------------------------------------------------------- */
+.ldr {
+  position: fixed;
+  inset: 0;
+  z-index: 9999999;
+  background: #191c20; /* Porta Pic Ink */
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+}
+
+/* Curtain slide up when finished */
+.ldr.done {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.ldr.is-hidden {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Vertical Color Columns (.ldr_colr & .ldr_bk)
+   -------------------------------------------------------------------------- */
+.ldr_colr,
+.ldr_bk {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Underlying color bands */
+.ldr_colr {
+  z-index: 1;
+  opacity: 1;
+}
+
+.ldr_colr .ldr_cl {
+  flex: 1;
+  height: 100%;
+  background: var(--c);
+  border-right: 1.5px solid rgba(25, 28, 32, 0.2);
+  position: relative;
+}
+
+.ldr_colr .ldr_cl:last-child {
+  border-right: none;
+}
+
+/* Black overlay masking bars that scaleY(0) down */
+.ldr_bk {
+  z-index: 2;
+  opacity: 1;
+}
+
+.ldr_bk .ldr_cl {
+  flex: 1;
+  height: 100%;
+  background: #191c20;
+  transform-origin: top;
+  transform: scaleY(1);
+  will-change: transform;
+  border-right: 1.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.ldr_bk .ldr_cl:last-child {
+  border-right: none;
+}
+
+/* --------------------------------------------------------------------------
+   Centered Content (.ldr_center)
+   -------------------------------------------------------------------------- */
+.ldr_center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: min(520px, 86vw);
+  pointer-events: none;
+}
+
+/* The Logo Text Image */
+.ldr_img {
+  width: min(440px, 82vw);
+  height: auto;
+  opacity: 0;
+  transform: scale(0.92);
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.ldr_img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ldr_img.pop {
+  animation: ldrImgPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes ldrImgPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* Tagline badge below the text logo */
+.ldr_tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: #191c20;
+  color: #fff1c1;
+  border: 2px solid #fff1c1;
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 #191c20, 0 8px 20px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-display, "Anybody", sans-serif);
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+}
+
+.ldr_tagline.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ldr_tagline svg {
+  width: 14px;
+  height: 14px;
+  fill: #e59d2c;
+  animation: ldrSparkleSpin 4s linear infinite;
+}
+
+@keyframes ldrSparkleSpin {
+  100% { transform: rotate(360deg); }
+}
+
+/* --------------------------------------------------------------------------
+   Skip Button (Accessibility)
+   -------------------------------------------------------------------------- */
+.ldr_skip {
+  position: absolute;
+  top: max(16px, env(safe-area-inset-top, 16px));
+  right: max(16px, env(safe-area-inset-right, 16px));
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(25, 28, 32, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff1c1;
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255, 241, 193, 0.35);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  outline: none;
+  pointer-events: auto;
+}
+
+.ldr_skip:hover {
+  background: #fff1c1;
+  color: #191c20;
+  border-color: #fff1c1;
+}
+
+.ldr_skip kbd {
+  font-family: monospace;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+.ldr_skip:hover kbd {
+  background: rgba(25, 28, 32, 0.2);
+  color: #191c20;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility (Reduced Motion)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ldr {
+    transition: opacity 0.3s ease !important;
+  }
+  .ldr.done {
+    transform: none !important;
+    opacity: 0 !important;
+  }
+  .ldr_bk .ldr_cl {
+    transform: scaleY(0) !important;
+    transition: none !important;
+  }
+}
