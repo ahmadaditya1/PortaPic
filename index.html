@@ -145,8 +145,12 @@
   <main id="main">
     <!-- ===== Hero ===== -->
     <section class="hero" id="top">
-      <!-- SLOT FOTO: ganti assets/img/hero-wash.svg dengan foto dokumentasi event asli (rasio 16:9, min 1920px). -->
-      <img class="hero__photo" src="assets/img/hero-wash.svg" alt="" aria-hidden="true" width="1600" height="900">
+      <div class="hero__media" aria-hidden="true">
+        <video class="hero__video" autoplay loop muted playsinline preload="auto">
+          <source src="assets/img/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
       <div class="shell hero__inner">
         <h1 class="hero__title">
           <span class="hero__line"><span>Everywhere</span></span>
@@ -617,7 +621,7 @@
         <div class="gallery-grid" id="gallery-grid">
           <!-- 1. Strip 2R — Semar Law Competition -->
           <figure class="plate plate--strip" data-cat="2r kampus">
-            <button class="plate__button" type="button" data-lightbox="assets/img/2r-event kampus.png" data-caption="Semar Law Competition — Strip 2R Porta Pic">
+            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/2r-semar-law.webp" data-caption="Semar Law Competition — Strip 2R Porta Pic">
               <span class="plate__frame"><img src="assets/img/gallery/2r-semar-law.webp" alt="Hasil cetak photobooth strip 2R Semar Law Competition" width="600" height="1798" loading="lazy"></span>
             </button>
             <figcaption class="plate__caption chip-caption"><span>2R</span><span>Semar Law Fair</span></figcaption>
@@ -625,7 +629,7 @@
 
           <!-- 2. Cetak 4R — SEF Explore the Future -->
           <figure class="plate plate--print" data-cat="4r festival kampus">
-            <button class="plate__button" type="button" data-lightbox="assets/img/4r-event kampus.png" data-caption="SEF Explore the Future — Cetak 4R Porta Pic">
+            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/4r-sef.webp" data-caption="SEF Explore the Future — Cetak 4R Porta Pic">
               <span class="plate__frame"><img src="assets/img/gallery/4r-sef.webp" alt="Hasil cetak photobooth 4R acara SEF Explore the Future" width="900" height="1349" loading="lazy"></span>
             </button>
             <figcaption class="plate__caption chip-caption"><span>4R</span><span>SEF Festival</span></figcaption>
@@ -633,7 +637,7 @@
 
           <!-- 3. Strip 2R — CODE Event -->
           <figure class="plate plate--strip" data-cat="2r festival">
-            <button class="plate__button" type="button" data-lightbox="assets/img/2r-event kampus 2.png" data-caption="CODE Event — Strip 2R Porta Pic">
+            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/2r-code.webp" data-caption="CODE Event — Strip 2R Porta Pic">
               <span class="plate__frame"><img src="assets/img/gallery/2r-code.webp" alt="Hasil cetak photobooth strip 2R CODE Event" width="600" height="1799" loading="lazy"></span>
             </button>
             <figcaption class="plate__caption chip-caption"><span>2R</span><span>CODE Event</span></figcaption>
@@ -641,7 +645,7 @@
 
           <!-- 4. Strip 2R — Nayantara Law Fair -->
           <figure class="plate plate--strip" data-cat="2r kampus">
-            <button class="plate__button" type="button" data-lightbox="assets/img/2r- event kampus 3.png" data-caption="Nayantara Law Fair — Strip 2R Porta Pic">
+            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/2r-nayantara.webp" data-caption="Nayantara Law Fair — Strip 2R Porta Pic">
               <span class="plate__frame"><img src="assets/img/gallery/2r-nayantara.webp" alt="Hasil cetak photobooth strip 2R Nayantara Law Fair" width="600" height="1798" loading="lazy"></span>
             </button>
             <figcaption class="plate__caption chip-caption"><span>2R</span><span>Nayantara Fair</span></figcaption>
@@ -649,7 +653,7 @@
 
           <!-- 5. Cetak 4R — Gignovus's Iftar Dentistry '24 -->
           <figure class="plate plate--print" data-cat="4r festival private">
-            <button class="plate__button" type="button" data-lightbox="assets/img/4r-private.jpg" data-caption="Gignovus's Iftar Dentistry '24 — Cetak 4R Porta Pic Edition">
+            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/4r-iftar.webp" data-caption="Gignovus's Iftar Dentistry '24 — Cetak 4R Porta Pic Edition">
               <span class="plate__frame"><img src="assets/img/gallery/4r-iftar.webp" alt="Hasil cetak photobooth 4R Porta Pic Edition Gignovus Iftar Dentistry" width="900" height="1350" loading="lazy"></span>
             </button>
             <figcaption class="plate__caption chip-caption"><span>4R</span><span>Gignovus's Iftar</span></figcaption>
@@ -657,7 +661,7 @@
 
           <!-- 6. Strip 2R — SEF Festival -->
           <figure class="plate plate--strip" data-cat="2r festival kampus">
-            <button class="plate__button" type="button" data-lightbox="assets/img/2r- event kampus 4.png" data-caption="SEF Festival — Strip 2R Porta Pic">
+            <button class="plate__button" type="button" data-lightbox="assets/img/gallery/2r-sef.webp" data-caption="SEF Festival — Strip 2R Porta Pic">
               <span class="plate__frame"><img src="assets/img/gallery/2r-sef.webp" alt="Hasil cetak photobooth strip 2R SEF Festival" width="600" height="1799" loading="lazy"></span>
             </button>
             <figcaption class="plate__caption chip-caption"><span>2R</span><span>SEF Explore</span></figcaption>
