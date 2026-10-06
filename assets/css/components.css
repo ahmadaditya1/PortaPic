@@ -595,25 +595,6 @@
   text-transform: uppercase;
 }
 
-/* ---- Bukti sosial -------------------------------------------------- */
-
-.proof__label {
-  margin-bottom: var(--sp-sm);
-  font-size: var(--fs-label);
-  font-weight: 700;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-}
-
-.proof__chip {
-  padding: 8px 16px;
-  background: var(--paper);
-  border: var(--border);
-  border-radius: var(--r-pill);
-  font-size: var(--fs-small);
-  font-weight: 600;
-}
-
 /* ---- Kartu pilihan layanan ---------------------------------------- */
 
 .choice-card {
