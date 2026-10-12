@@ -404,7 +404,7 @@
   display: flex;
   align-items: center;
   width: max-content;
-  animation: logo-marquee-scroll 28s linear infinite;
+  animation: logo-marquee-scroll 45s linear infinite;
   will-change: transform;
 }
 
@@ -434,29 +434,30 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  opacity: 0.8;
+  opacity: 0.88;
   transition: opacity var(--dur-fast), transform var(--dur-fast);
 }
 
 .logo-marquee__item:hover {
   opacity: 1;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-/* Image logo support (automatically styled to crisp monochrome like the reference) */
+/* Image logo support (crisp rendering, responsive height, hover glow) */
 .logo-marquee__img {
-  height: clamp(26px, 3.2vw, 36px);
+  height: clamp(30px, 3.6vw, 42px);
   width: auto;
   max-width: 140px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
-  transition: opacity var(--dur-fast), filter var(--dur-fast);
+  opacity: 0.92;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.45));
+  transition: opacity var(--dur-fast), filter var(--dur-fast), transform var(--dur-fast);
 }
 
 .logo-marquee__item:hover .logo-marquee__img {
   opacity: 1;
-  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 241, 193, 0.4));
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 10px rgba(255, 241, 193, 0.45));
 }
 
 /* Text badge logos (stylish typographic placeholders matching various brand identities) */

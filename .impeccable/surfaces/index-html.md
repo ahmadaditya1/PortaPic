@@ -37,3 +37,4 @@ Hero → "Book Now" (WA, pesan generik) atau "Ajukan Kerja Sama" (WA, pesan B2B)
 - Tidak ada form, tidak ada pembayaran online, tidak ada backend.
 - Tidak ada halaman kedua; semua navigasi adalah anchor.
 - Tidak ada angka pencapaian, testimoni, atau nama klien yang dikarang — slot-nya disiapkan, isinya kosong dan ditandai.
+ken
