@@ -404,7 +404,7 @@
   display: flex;
   align-items: center;
   width: max-content;
-  animation: logo-marquee-scroll 45s linear infinite;
+  animation: logo-marquee-scroll 65s linear infinite;
   will-change: transform;
 }
 
