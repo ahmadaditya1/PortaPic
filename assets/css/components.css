@@ -156,25 +156,28 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
+  box-shadow: 4px 4px 0 var(--ink);
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
-    transform var(--dur-fast) var(--ease-out);
+    transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
 }
 
 .btn:hover {
-  transform: translate(-1px, -1px);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 
 .btn:active {
-  transform: none;
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
 
 .btn--primary {
-  background: var(--blue);
-  color: var(--paper);
+  background: var(--amber);
+  color: var(--ink);
 }
 
 .btn--primary:hover {
-  background: var(--blue-deep);
+  background: var(--amber-deep);
 }
 
 .btn--cta {
@@ -544,7 +547,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  opacity: 0.55;
+  opacity: 0.85;
   filter: contrast(1.08) brightness(0.96);
 }
 
@@ -553,9 +556,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(168, 21, 43, 0.55) 0%,
-    rgba(168, 21, 43, 0.72) 65%,
-    rgba(17, 17, 17, 0.45) 100%
+    rgba(168, 21, 43, 0.22) 0%,
+    rgba(168, 21, 43, 0.38) 65%,
+    rgba(17, 17, 17, 0.4) 100%
   );
   pointer-events: none;
 }
@@ -793,8 +796,14 @@
 
 .panel {
   padding: clamp(20px, 3vw, 32px);
+  color: var(--ink);
   border: var(--border);
   border-radius: var(--r-md);
+}
+
+.panel .quiet,
+.contact-card .quiet {
+  color: var(--ink-soft);
 }
 
 .panel--cream {
@@ -1214,10 +1223,12 @@
 }
 
 .contact-card--cream {
+  color: var(--ink);
   background: var(--cream);
 }
 
 .contact-card--periwinkle {
+  color: var(--ink);
   background: var(--periwinkle);
 }
 
@@ -1245,6 +1256,10 @@
   width: 20px;
   height: 20px;
   color: var(--maroon);
+}
+
+.band--maroon .contact-list svg {
+  color: var(--amber);
 }
 
 /* ---- Footer -------------------------------------------------------- */

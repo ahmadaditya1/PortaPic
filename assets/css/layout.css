@@ -34,6 +34,11 @@
   color: var(--paper);
 }
 
+.band--maroon {
+  background: var(--maroon);
+  color: var(--cream);
+}
+
 .band--orange {
   background: var(--orange);
   color: var(--ink);
@@ -116,7 +121,8 @@
 }
 
 .band--blue .quiet,
-.band--ink .quiet {
+.band--ink .quiet,
+.band--maroon .quiet {
   color: rgb(255 255 255 / 0.78);
 }
 

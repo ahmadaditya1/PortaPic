@@ -2,22 +2,23 @@
 name: Porta Pic
 description: Everywhere is a Studio — landing page photobooth Solo Raya
 colors:
-  ink: "#191c20"
-  ink-soft: "#3b3a35"
-  paper: "#ffffff"
-  cream: "#fff1c1"
-  periwinkle: "#d4e3ff"
-  orange: "#e87f00"
-  orange-deep: "#b85800"
-  slate: "#4e80c2"
-  blue: "#4673af"
-  amber: "#e59d2c"
-  amber-deep: "#cf8a1c"
-  maroon: "#8a242e"
-  peach: "#ffddb5"
-  pale-blue: "#a9cee7"
-  khaki: "#c9c7a8"
-  khaki-deep: "#8c8b76"
+  ink: "#111111"
+  ink-soft: "#2e2b26"
+  paper: "#fffbef"
+  cream: "#fff3d6"
+  periwinkle: "#d6e4ff"
+  orange: "#f07f0a"
+  orange-deep: "#c25e00"
+  slate: "#2f5fb8"
+  blue: "#2f5fb8"
+  blue-deep: "#1d2c6b"
+  amber: "#f5a300"
+  amber-deep: "#d68c00"
+  maroon: "#a8152b"
+  peach: "#ffe9a8"
+  pale-blue: "#ffd166"
+  khaki: "#a8152b"
+  khaki-deep: "#7d0f20"
 typography:
   display:
     fontFamily: "Anybody, 'Arial Black', sans-serif"
@@ -161,49 +162,49 @@ components:
 
 **Creative North Star: "Studio foto keliling yang dicetak jadi poster zine"**
 
-Dunia visualnya datar, blok, dan berani: bidang warna padat yang saling menumpuk seperti lembar cetak yang baru keluar dari printer foto, ditempel di papan biru. Tidak ada gradasi dekoratif, tidak ada kaca, tidak ada bayangan mengambang. Kedalaman datang dari tumpukan bidang dan garis tinta, bukan dari shadow. Warna diambil langsung dari `referensi.png`: krem `#fff1c1` sebagai kartu, periwinkle `#d4e3ff` sebagai kartu kedua, oranye `#e87f00` sebagai kepala blok B2B, biru `#4673af` sebagai papan galeri, amber `#e59d2c` sebagai panel hasil, maroon `#8a242e` sebagai tinta gambar dan wordmark.
+Dunia visualnya datar, blok, dan berani: bidang warna padat yang saling menumpuk seperti lembar cetak yang baru keluar dari printer foto, ditempel di papan biru. Tidak ada gradasi dekoratif, tidak ada kaca, tidak ada bayangan mengambang. Kedalaman datang dari tumpukan bidang dan garis tinta, bukan dari shadow. Paletnya mengikuti desain landing page Porta Pic di Claude: crimson `#a8152b` untuk hero, kontak, dan wordmark; amber `#f5a300` untuk tombol aksi; krem `#fff3d6` dan krem terang `#fffbef` sebagai latar dan kartu; biru `#2f5fb8` untuk papan About dan galeri; navy `#1d2c6b`, oranye `#f07f0a`, dan tinta `#111111`.
 
 Tipografinya dua suara: headline **grotesque ultra-lebar uppercase** yang mencolok untuk semua judul section, dan **Schibsted Grotesk** yang tenang untuk semua teks baca. Wordmark ditulis dengan script kuas (Yellowtail) meniru logo asli. Tidak ada suara ketiga.
 
 Halaman ini hidup dari satu momen: headline hero muncul dari balik topengnya seperti gambar yang sedang di-develop. Selebihnya tenang dan langsung — halaman ini alat konversi, bukan pameran.
 
 **Key Characteristics:**
-- Bidang warna padat, garis tinta 2px, tanpa gradasi dekoratif dan tanpa shadow mengambang.
+- Bidang warna padat, garis tinta 2px, tanpa gradasi dekoratif dan tanpa shadow mengambang (bayangan keras hanya di tombol dan blok harga).
 - Judul section adalah chip/slab berwarna, bukan label kecil di atas judul.
 - Galeri disajikan sebagai papan biru berisi contoh cetak berbingkai (2R strip & 4R print).
-- Aksen oranye hanya untuk harga dan aturan pemisah di blok B2B; biru hanya untuk aksi utama.
+- Aksen oranye hanya untuk harga dan aturan pemisah di blok B2B; amber untuk aksi utama.
 - Semua isi yang belum tersedia ditandai jujur sebagai placeholder, bukan dikarang.
 
 ## Colors
 
-Paletnya berasal dari materi cetak Porta Pic: krem hangat, periwinkle, oranye tinta, biru papan, dan maroon.
+Paletnya mengikuti desain landing page Porta Pic di Claude: crimson, amber, krem, biru papan, navy, dan tinta hitam.
 
 ### Primary
-- **Papan Blue** (`#4673af`): papan galeri full-bleed dan tombol aksi utama dengan teks putih. Dipilih di atas `#4e80c2` karena rasio kontrasnya dengan putih 4.8:1 (lolos AA), sedangkan `#4e80c2` hanya 4.0:1.
-- **Maroon Tinta** (`#8a242e`): wordmark, ilustrasi bidang pada contoh cetak, panel hasil alternatif. Teks putih di atasnya 8.8:1.
+- **Crimson** (`#a8152b`, token `--maroon`): latar hero (lapisan di atas video), band Kontak, wordmark. Teks krem/putih di atasnya ≥7:1.
+- **Amber** (`#f5a300`): tombol aksi utama (`.btn--primary`, `.btn--cta`), panel hasil kalkulator, label footer. **Hanya dengan teks tinta.**
+- **Papan Blue** (`#2f5fb8`): band About dan galeri. Teks putih di atasnya 6.1:1.
 
 ### Secondary
-- **Cream Kartu** (`#fff1c1`): kartu harga pertama, input kalkulator, chip judul section.
-- **Periwinkle** (`#d4e3ff`): kartu harga kedua dan kartu layanan partnership; selalu berpasangan dengan teks tinta.
-- **Orange Tinta** (`#e87f00`): hanya untuk bidang — kepala blok B2B, aturan horizontal, aksen dekoratif. Tidak pernah untuk teks kecil.
-- **Orange Deep** (`#b85800`): teks harga dan label oranye. Dipakai karena `#e87f00` hanya 2.8:1 di atas kertas (gagal AA).
-- **Amber** (`#e59d2c`): panel hasil kalkulator dan kartu testimoni ketiga. **Hanya dengan teks tinta**, tidak pernah dengan teks putih (putih di atas amber 2.3:1).
-- **Amber Deep** (`#cf8a1c`): state hover tombol CTA amber, supaya hover tetap memakai teks tinta.
-- **Warm Ink** (`#3a2606`): teks sekunder di atas bidang oranye dan amber; menggantikan `--ink-soft` supaya kontrasnya tetap ≥5:1.
-- **Peach Footer** (`#ffddb5`): badan footer, dengan teks cokelat-gelap `#2a1800`.
-- **Pale Blue** (`#a9cee7`): garis band dekoratif di atas footer. Tidak pernah memuat teks.
+- **Cream** (`#fff3d6`): band selang-seling (Alur, Syarat), kartu, chip judul section.
+- **Paper / Cream Terang** (`#fffbef`): latar section lain dan kartu kedua.
+- **Periwinkle** (`#d6e4ff`): kartu kedua dan kartu layanan partnership; selalu dengan teks tinta.
+- **Navy** (`#1d2c6b`, token `--blue-deep`): bidang gelap pendamping biru.
+- **Orange** (`#f07f0a`): hanya untuk bidang — kepala blok B2B, callout, aksen. Tidak pernah untuk teks kecil.
+- **Orange Deep** (`#c25e00`): teks harga dan label oranye.
+- **Amber Deep** (`#d68c00`): hover tombol amber.
+- **Warm Ink** (`#3a2606`): teks sekunder di atas bidang oranye dan amber.
+- **Butter** (`#ffe9a8`, token `--peach`): bidang aksen hangat.
+- **Sun** (`#ffd166`, token `--pale-blue`): garis band dekoratif di atas footer. Tidak pernah memuat teks.
 
 ### Neutral
-- **Ink** (`#191c20`): semua teks utama, garis aturan 2px, garis tepi kartu.
-- **Ink Soft** (`#3b3a35`): teks sekunder. Ditint dari arah hangat, bukan abu-abu netral, supaya tetap terasa bagian dari palet kertas.
-- **Paper** (`#ffffff`): latar halaman dan bidang kosong di antara blok.
-- **Khaki Wash** (`#c9c7a8` → `#8c8b76`): latar hero, dua bidang datar bertumpuk yang meniru wash foto yang belum dibaca; ini slot tempat foto event asli masuk.
+- **Ink** (`#111111`): semua teks utama, garis tepi, bayangan tombol, latar footer.
+- **Ink Soft** (`#2e2b26`): teks sekunder, ditint hangat.
 
 ### Named Rules
 
-**The Two Blues Rule.** `#4673af` membawa teks putih; `#4e80c2` hanya untuk bidang dekoratif atau teks besar. Jangan pernah menaruh teks kecil putih di atas `#4e80c2`.
+**The Dark Band Rule.** Kartu dan panel di atas band gelap (biru, crimson, tinta) selalu memakai teks tinta sendiri; teks di luar kartu memakai krem/putih.
 
-**The Amber Is Ink Rule.** Amber selalu berpasangan dengan tinta `#191c20`. Putih di atas amber adalah kesalahan kontras yang paling mudah terjadi di halaman ini.
+**The Amber Is Ink Rule.** Amber selalu berpasangan dengan tinta `#111111`. Putih di atas amber adalah kesalahan kontras yang paling mudah terjadi di halaman ini.
 
 **The No Grey Rule.** Tidak ada abu-abu netral. Teks sekunder di atas bidang berwarna ditint dari warna bidang itu sendiri (hangat di krem, biru di papan).
 
@@ -238,7 +239,7 @@ Paletnya berasal dari materi cetak Porta Pic: krem hangat, periwinkle, oranye ti
 
 ## Layout
 
-Grid 12 kolom di dalam shell maksimal 1200px, gutter `clamp(16px, 3vw, 32px)`. Halaman berjalan sebagai rangkaian **band full-bleed**: khaki (hero), hitam tipis (marquee), kertas (layanan, harga, syarat, kontak), krem (keunggulan + frame), oranye (kepala blok B2B), kertas dengan aturan oranye (kalkulator), biru (galeri), kertas (testimoni), pale blue + peach (footer). Pergantian band inilah yang memisahkan section, bukan garis atau shadow.
+Grid 12 kolom di dalam shell maksimal 1200px, gutter `clamp(16px, 3vw, 32px)`. Halaman berjalan sebagai rangkaian **band full-bleed**: crimson (hero), hitam tipis (ticker), krem terang (layanan + harga), biru (About), hitam tipis (marquee), krem (alur), biru (galeri), krem (syarat), crimson (kontak), garis kuning + hitam (footer). Pergantian band inilah yang memisahkan section, bukan garis atau shadow.
 
 Dua blok 50/50 dipertahankan dari referensi: blok B2B (kepala oranye + kalkulator) dan blok keunggulan + frame. Galeri memakai empat kolom tetap seperti referensi: dua kolom luar berisi strip 2R yang lebih sempit, dua kolom dalam berisi print 4R yang lebih lebar.
 
@@ -273,8 +274,9 @@ Starburst dan doodle bintang dari referensi dipakai sebagai penanda kecil di sud
 ## Components
 
 ### Buttons
-- **Primary** (`#4673af` / putih, border tinta 2px): aksi tunggal yang paling penting di tiap layar. Hover menggelap ke `#4e80c2` dan bergeser 2px.
-- **CTA** (`#e59d2c` / tinta): dipakai di navigasi ("BOOK NOW"), satu-satunya tombol amber di luar blok B2B.
+- **Semua tombol**: border tinta 2px dan bayangan keras `4px 4px 0` tinta. Hover bergeser 2px dan bayangan menyusut ke 2px; aktif menempel rata.
+- **Primary** (`#f5a300` / tinta): aksi tunggal yang paling penting di tiap layar. Hover menggelap ke `#d68c00`.
+- **CTA** (`#f5a300` / tinta): dipakai di navigasi ("BOOK NOW").
 - **Ghost** (kertas / tinta, border tinta 2px): aksi sekunder di sebelah primary ("Ajukan Kerja Sama").
 - Semua tombol memuat ikon SVG yang digambar sendiri, satu ketebalan garis, bila ikonnya membantu.
 
@@ -316,8 +318,8 @@ Starburst dan doodle bintang dari referensi dipakai sebagai penanda kecil di sud
 - Kalau menyentuh blok harga, ikuti varian `--nb-*` di `assets/css/pricing.css` — jangan menulis nilai bayangan baru di tempat lain.
 
 ### Don't:
-- Jangan menaruh teks putih di atas amber `#e59d2c` atau di atas slate `#4e80c2` pada ukuran kecil.
-- Jangan memakai gradasi dekoratif, kaca/blur, atau shadow hard-offset **di luar `.pricing-nb`**.
+- Jangan menaruh teks putih di atas amber `#f5a300` atau oranye `#f07f0a`.
+- Jangan memakai gradasi dekoratif, kaca/blur, atau shadow hard-offset di luar tombol dan `.pricing-nb`.
 - Jangan memakai emoji atau glyph unicode sebagai ikon.
 - Jangan menambah suara tipografi ketiga, atau memakai script di luar wordmark.
 - Jangan mengarang testimoni, nama klien, atau angka pencapaian.
