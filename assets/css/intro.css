@@ -15,7 +15,7 @@ body.splash-active {
   position: fixed;
   inset: 0;
   z-index: 9999999;
-  background: #191c20; /* Porta Pic Ink */
+  background: #111111; /* Porta Pic Ink */
   overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
@@ -54,7 +54,7 @@ body.splash-active {
   flex: 1;
   height: 100%;
   background: var(--c);
-  border-right: 1.5px solid rgba(25, 28, 32, 0.2);
+  border-right: 1.5px solid rgba(17, 17, 17, 0.2);
   position: relative;
 }
 
@@ -71,7 +71,7 @@ body.splash-active {
 .ldr_bk .ldr_cl {
   flex: 1;
   height: 100%;
-  background: #191c20;
+  background: #111111;
   transform-origin: top;
   transform: scaleY(1);
   will-change: transform;
@@ -133,11 +133,11 @@ body.splash-active {
   align-items: center;
   gap: 8px;
   padding: 6px 18px;
-  background: #191c20;
-  color: #fff1c1;
-  border: 2px solid #fff1c1;
+  background: #111111;
+  color: #fff3d6;
+  border: 2px solid #fff3d6;
   border-radius: 999px;
-  box-shadow: 3px 3px 0 #191c20, 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 0 #111111, 0 8px 20px rgba(0, 0, 0, 0.3);
   font-family: var(--font-display, "Anybody", sans-serif);
   font-size: clamp(0.75rem, 2vw, 0.9rem);
   font-weight: 900;
@@ -156,7 +156,7 @@ body.splash-active {
 .ldr_tagline svg {
   width: 14px;
   height: 14px;
-  fill: #e59d2c;
+  fill: #f5a300;
   animation: ldrSparkleSpin 4s linear infinite;
 }
 
@@ -176,16 +176,16 @@ body.splash-active {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: rgba(25, 28, 32, 0.75);
+  background: rgba(17, 17, 17, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  color: #fff1c1;
+  color: #fff3d6;
   font-family: var(--font-body, system-ui, sans-serif);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border: 1.5px solid rgba(255, 241, 193, 0.35);
+  border: 1.5px solid rgba(255, 243, 214, 0.35);
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -195,9 +195,9 @@ body.splash-active {
 }
 
 .ldr_skip:hover {
-  background: #fff1c1;
-  color: #191c20;
-  border-color: #fff1c1;
+  background: #fff3d6;
+  color: #111111;
+  border-color: #fff3d6;
 }
 
 .ldr_skip kbd {
@@ -209,8 +209,8 @@ body.splash-active {
 }
 
 .ldr_skip:hover kbd {
-  background: rgba(25, 28, 32, 0.2);
-  color: #191c20;
+  background: rgba(17, 17, 17, 0.2);
+  color: #111111;
 }
 
 /* --------------------------------------------------------------------------

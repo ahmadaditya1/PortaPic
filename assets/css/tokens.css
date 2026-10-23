@@ -1,38 +1,38 @@
 /* Porta Pic — design tokens.
-   Sumber warna & komposisi: referensi.png. Aturan pakai: DESIGN.md. */
+   Sumber warna: desain landing page di Claude (crimson, amber, cream, biru). Aturan pakai: DESIGN.md. */
 
 :root {
   color-scheme: light;
 
   /* ---- Palette ---------------------------------------------------- */
-  --ink: #191c20;
-  --ink-soft: #3b3a35;
-  --paper: #ffffff;
+  --ink: #111111;
+  --ink-soft: #2e2b26;
+  --paper: #fffbef;
 
-  --cream: #fff1c1;
-  --cream-soft: #fdf7e2;
-  --periwinkle: #d4e3ff;
+  --cream: #fff3d6;
+  --cream-soft: #fffbef;
+  --periwinkle: #d6e4ff;
 
-  --orange: #e87f00;
-  --orange-deep: #b85800;
+  --orange: #f07f0a;
+  --orange-deep: #c25e00;
 
-  --blue: #4673af;
-  --blue-deep: #35598b;
-  --slate: #4e80c2;
+  --blue: #2f5fb8;
+  --blue-deep: #1d2c6b;
+  --slate: #2f5fb8;
 
-  --amber: #e59d2c;
-  --amber-deep: #cf8a1c;
-  --maroon: #8a242e;
+  --amber: #f5a300;
+  --amber-deep: #d68c00;
+  --maroon: #a8152b;
 
-  --peach: #ffddb5;
-  --peach-ink: #2a1800;
+  --peach: #ffe9a8;
+  --peach-ink: #111111;
   --on-warm: #3a2606;
-  --pale-blue: #a9cee7;
+  --pale-blue: #ffd166;
 
-  --khaki: #c9c7a8;
-  --khaki-deep: #8c8b76;
+  --khaki: #a8152b;
+  --khaki-deep: #7d0f20;
 
-  --focus: #35598b;
+  --focus: #2f5fb8;
 
   /* ---- Type ------------------------------------------------------- */
   --font-display: "Anybody", "Arial Black", "Helvetica Neue", sans-serif;

@@ -12,7 +12,7 @@
 }
 
 .nav.is-stuck {
-  box-shadow: 0 8px 24px -16px rgb(25 28 32 / 0.45);
+  box-shadow: 0 8px 24px -16px rgb(17 17 17 / 0.45);
 }
 
 .nav__inner {
@@ -457,7 +457,7 @@
 .logo-marquee__item:hover .logo-marquee__img {
   opacity: 1;
   transform: scale(1.06);
-  filter: drop-shadow(0 0 10px rgba(255, 241, 193, 0.45));
+  filter: drop-shadow(0 0 10px rgba(255, 243, 214, 0.45));
 }
 
 /* Text badge logos (stylish typographic placeholders matching various brand identities) */
@@ -505,7 +505,7 @@
 
   .logo-marquee__header {
     border-right: none;
-    border-bottom: 1.5px solid rgba(255, 241, 193, 0.2);
+    border-bottom: 1.5px solid rgba(255, 243, 214, 0.2);
     padding: var(--sp-xs) var(--sp-md);
     justify-content: center;
     text-align: center;
@@ -553,9 +553,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(255, 241, 193, 0.42) 0%,
-    rgba(201, 199, 168, 0.55) 65%,
-    rgba(25, 28, 32, 0.28) 100%
+    rgba(168, 21, 43, 0.55) 0%,
+    rgba(168, 21, 43, 0.72) 65%,
+    rgba(17, 17, 17, 0.45) 100%
   );
   pointer-events: none;
 }
@@ -575,12 +575,8 @@
 
 .hero__title {
   font-size: var(--fs-display);
-  text-shadow:
-    -2px -2px 0 var(--paper),
-     2px -2px 0 var(--paper),
-    -2px  2px 0 var(--paper),
-     2px  2px 0 var(--paper),
-     0    4px 0 var(--paper);
+  color: var(--cream);
+  text-shadow: 5px 5px 0 var(--ink);
 }
 
 .hero__line {
@@ -711,7 +707,7 @@
   position: absolute;
   inset-inline: 0;
   top: 42px;
-  border-top: 2px dashed rgb(25 28 32 / 0.4);
+  border-top: 2px dashed rgb(17 17 17 / 0.4);
 }
 
 .tag-card__hole {
@@ -1254,9 +1250,13 @@
 /* ---- Footer -------------------------------------------------------- */
 
 .footer {
-  background: var(--peach);
-  color: var(--peach-ink);
+  background: var(--ink);
+  color: var(--cream);
   border-top: var(--border);
+}
+
+.footer .wordmark {
+  color: var(--amber);
 }
 
 .footer__inner {
@@ -1321,7 +1321,8 @@
 .footer__tape {
   display: inline-block;
   padding: 8px 14px;
-  background: var(--paper);
+  background: var(--amber);
+  color: var(--ink);
   border: var(--border);
   border-radius: var(--r-xs);
   font-size: var(--fs-label);
@@ -1386,7 +1387,7 @@
   display: grid;
   place-items: center;
   padding: var(--gutter);
-  background: rgb(25 28 32 / 0.88);
+  background: rgb(17 17 17 / 0.88);
   border: 0;
 }
 
